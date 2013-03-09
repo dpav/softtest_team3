@@ -1,0 +1,60 @@
+Code to be added to the Test Framework Helper file:
+
+requires:  using System.Diagnostics;
+
+	/// <summary>
+        /// Creates a Process object
+        /// </summary>
+        /// <param name="appPath">The fully qualified path to the application to be used by the Process object</param>
+        /// <returns>a Process object</returns>
+        public static Process CreateProcess(string appPath)
+        {
+            Process np = new Process();
+            np.StartInfo.FileName = appPath;
+            np.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            return np;
+        }
+
+
+
+Code to be added to the TED Constant file.  Please feel free to rename, I'll make sure my code matches whatever
+these constants are named once we get the code uploaded to GitHub.
+
+	public enum TEDMainMenu : int
+        {
+            file = 0,
+            edit = 1,
+            search = 2,
+            tools = 3,
+            favourites = 4,
+            clips = 5, 
+            options = 6,
+            help = 7
+        }
+        
+        //Constants for the File submenu items
+        public enum FileMenu : int
+        {
+            newFile = 0, 
+            open = 1,
+            revert = 2,
+            reOpen = 3,
+            import = 4,
+            include = 5,
+            save = 7,
+            saveAs = 8,
+            export = 9,
+            exclude = 10,
+            encoding = 12,
+            newLines = 13,
+            properties = 14,
+            pageSetUp = 16,
+            print = 17,
+            recentFiles = 19,
+            hideToTray = 21,
+            newWindow = 22, 
+            saveNExit = 24,
+            exit = 25
+
+        }
+

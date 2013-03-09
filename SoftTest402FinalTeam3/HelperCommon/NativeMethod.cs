@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace SoftTest402.Team3
+namespace SoftTest402.TeamTiga.FinalProject
 {
     class NativeMethod
     {
@@ -74,13 +77,13 @@ namespace SoftTest402.Team3
         public static extern IntPtr SendMessage
             (IntPtr hWnd, uint windowMessage, IntPtr wParam, IntPtr lParam);
 
-        
+
         // For getting text from textbox
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
         public static extern IntPtr SendMessage
             (IntPtr hWnd, uint windowMessage, IntPtr wParam, [Out] StringBuilder lparam);
 
-        
+
         /// <summary>
         /// Aliased overload of SendMessage to set text to a textbox control.
         /// </summary>
@@ -109,8 +112,12 @@ namespace SoftTest402.Team3
         /// the last error, retrieved with GetLastError, is set to 5 (access
         /// denied).</returns>
         [DllImport("user32.dll", EntryPoint = "SendMessage", CharSet = CharSet.Auto, SetLastError = false)]
-        public static extern IntPtr SetTextToTextbox
+        public static extern IntPtr SetTextToTextBox
             (IntPtr hWndTextbox, uint windowMessage, IntPtr wParam, StringBuilder text);
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage", CharSet = CharSet.Auto, SetLastError = false)]
+        public static extern IntPtr GetTextFromTextBox
+            (IntPtr hWndTextbox, uint windowMessage, IntPtr wParam, IntPtr Buffer);
 
         /// <summary>
         /// sends the specified message to a window and returns immediately; it
@@ -223,5 +230,6 @@ namespace SoftTest402.Team3
 
         [DllImport("user32.dll")]
         public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, string windowTitle);
+
     }
 }
