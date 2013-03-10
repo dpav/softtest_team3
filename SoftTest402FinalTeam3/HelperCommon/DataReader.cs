@@ -32,7 +32,7 @@ namespace SoftTest402.TeamTiga.FinalProject
             Random rand = new Random();
             int length = rand.Next(TedNPadConstant.minStringLength, TedNPadConstant.maxStringLength + 1);
             StringBuilder sb = new StringBuilder();
-            
+
             while (sb.Length < length)
             {
                 sb.Append(Convert.ToChar(rand.Next(

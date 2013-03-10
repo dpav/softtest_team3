@@ -52,8 +52,8 @@ namespace SoftTest402.TeamTiga.FinalProject
             // Get the handle to a menu of a sub menu
             IntPtr hWndMenuOfSubMenu =
                 NativeMethod.GetSubMenu(hWndSubMenu, subMenuPosition);
-             uint popupSubMenuItemId =
-                NativeMethod.GetMenuItemID(hWndMenuOfSubMenu, subMenuItemPosition);
+            uint popupSubMenuItemId =
+               NativeMethod.GetMenuItemID(hWndMenuOfSubMenu, subMenuItemPosition);
             // Call an aliased SendNotifyMessage
             return NativeMethod.ClickMenuItem(
                 hWndMainWindow,
@@ -110,7 +110,7 @@ namespace SoftTest402.TeamTiga.FinalProject
             }
             NativeMethod.SetTextToTextbox(myHandle, (uint)User32Constant.WindowMessage.WM_SETTEXT, IntPtr.Zero, filename);
             IntPtr openButton = NativeMethod.GetDlgItem(saveDialogHandle, (int)0x1);
-            ClickButton(openButton);           
+            ClickButton(openButton);
         }
 
         public static string GetTextFromEditWindow(IntPtr mainWindow)

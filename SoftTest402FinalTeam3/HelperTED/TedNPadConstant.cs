@@ -25,7 +25,7 @@ namespace SoftTest402.TeamTiga.FinalProject
         public const int THREAD_SLEEP = 1000;
         public const int WAIT_FOR_EXIT = 1000;
         public const int WAIT_TIME = 500;
-        
+
         /// <summary>
         ///  The ID of the Main Menu items
         /// </summary>
@@ -71,6 +71,7 @@ namespace SoftTest402.TeamTiga.FinalProject
         /// <summary>
         ///  The ID of the Edit Menu items
         /// </summary>
+
         public enum EditSubMenu : int
         {
             Undo = 0,
@@ -87,13 +88,34 @@ namespace SoftTest402.TeamTiga.FinalProject
             SelectAll = 14,
             DeleteLine = 16,
             SmartReturn = 22
-
         }
+
 
         public enum EditInsertMenu : int
         {
             TimeDate = 6,
             Date = 10
+        }
+
+        /// <summary>
+        ///  The ID of the Options Menu items
+        /// </summary>
+        public enum OptionsMenu : int
+        {
+            StatusBar = 0,
+            LineNumbers = 2,
+            VisibleNewline = 3,
+            LineLength = 4,
+            ZoomIn = 6,
+            ZoomReset = 7,
+            ZoomOut = 8,
+            WordWrap = 10,
+            WrapMargin = 11,
+            FullScreen = 13,
+            StayonTop = 14,
+            SecondFont = 16,
+            Settings = 18
+
         }
     }
 }
