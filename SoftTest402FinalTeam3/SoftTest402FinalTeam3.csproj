@@ -8,8 +8,8 @@
     <ProjectGuid>{1BD60029-8BBA-4084-9A0A-57ADDA467FF0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SoftTest402FinalTeam3</RootNamespace>
-    <AssemblyName>SoftTest402FinalTeam3</AssemblyName>
+    <RootNamespace>SoftTest402.TeamTiga.FinalProject</RootNamespace>
+    <AssemblyName>TeamTigaFinal</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
