@@ -52,7 +52,6 @@
     <Compile Include="HelperCommon\DataReader.cs" />
     <Compile Include="HelperCommon\Harness.cs" />
     <Compile Include="HelperCommon\Helper.cs" />
-    <Compile Include="HelperCommon\Logger.cs" />
     <Compile Include="HelperCommon\NativeMethod.cs" />
     <Compile Include="HelperCommon\User32Constant.cs" />
     <Compile Include="HelperTED\TedNPadConstant.cs" />

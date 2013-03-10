@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SoftTest402.TeamTiga.FinalProject.HelperCommon;
+using SoftTest402.TeamTiga.FinalProject.TestCase;
 
 namespace SoftTest402.TeamTiga.FinalProject
 {

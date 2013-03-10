@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Text;
 using System.IO;
+using SoftTest402.TeamTiga.FinalProject.HelperTED;
 using TestingMentor.TestTool.Babel;
 
-namespace SoftTest402.TeamTiga.FinalProject
+namespace SoftTest402.TeamTiga.FinalProject.HelperCommon
 {
     class DataReader
     {

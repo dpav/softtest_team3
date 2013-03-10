@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Mime;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using SoftTest402.TestAutomationFramework;
+using SoftTest402.TeamTiga.FinalProject.HelperCommon;
 
-namespace SoftTest402.TeamTiga.FinalProject
+namespace SoftTest402.TeamTiga.FinalProject.TestCase
 {
     internal class TestCaseDave
     {
@@ -21,7 +14,6 @@ namespace SoftTest402.TeamTiga.FinalProject
             // TODO : lots of logic
 
             // Local Process object to carry through the test
-            Process np = null;
             bool result = false;
 
             Harness.Logger.LogComment("Opening Process");
@@ -29,6 +21,7 @@ namespace SoftTest402.TeamTiga.FinalProject
             try
             {
                 // start up the process
+                Process np = null;
                 np = Harness.CreateProcess();
 
                 try

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SoftTest402.TeamTiga.FinalProject.HelperCommon;
 
-namespace SoftTest402.TeamTiga.FinalProject
+namespace SoftTest402.TeamTiga.FinalProject.HelperTED
 {
     class TedNPadHelper
     {

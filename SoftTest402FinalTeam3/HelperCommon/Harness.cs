@@ -1,27 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
-using SoftTest402.TestAutomationFramework;
+using SoftTest402.TeamTiga.FinalProject.HelperTED;
 
-namespace SoftTest402.TeamTiga.FinalProject
+namespace SoftTest402.TeamTiga.FinalProject.HelperCommon
 {
     public static class Harness
     {
-        private static bool _Initiaized = false;
+        private static bool _initiaized = false;
 
         public static TestAutomationFramework.Logger Logger { get; private set; }
 
         public static string ProgramPath { get; private set; }
         public static string TestName { get; private set; }
 
-        public static void Initialize(string ExePath, string LogName)
+        public static void Initialize(string exePath, string logName)
         {
-            ProgramPath = ExePath;
-            _Initiaized = true;
-            Logger = new TestAutomationFramework.Logger(LogName);
+            ProgramPath = exePath;
+            _initiaized = true;
+            Logger = new TestAutomationFramework.Logger(logName);
         }
 
         /// <summary>
@@ -34,7 +30,7 @@ namespace SoftTest402.TeamTiga.FinalProject
         public static void RunTest(string TestName, Func<bool> RunTestMethod)
         {
             bool TestPassResult = false;
-            if (!_Initiaized)
+            if (!_initiaized)
             {
                 // We should throw an exception.  Or we can just return...
                 throw new Exception("Not Initialized.  Call Initialize() first)");
@@ -56,7 +52,7 @@ namespace SoftTest402.TeamTiga.FinalProject
         {
             Process process = null;
 
-            if (!_Initiaized)
+            if (!_initiaized)
             {
                 // We should throw an exception.  Or we can just return...
                 throw new Exception("Not Initialized.  Call Initialize() first)");
@@ -79,7 +75,7 @@ namespace SoftTest402.TeamTiga.FinalProject
 
         public static void TerminateProcess(Process process)
         {
-            if (!_Initiaized)
+            if (!_initiaized)
             {
                 // We should throw an exception.  Or we can just return...
                 throw new Exception("Not Initialized.  Call Initialize() first)");

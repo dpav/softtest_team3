@@ -1,9 +1,6 @@
-﻿using System;
-using System.Text;
-
-namespace SoftTest402.TeamTiga.FinalProject
+﻿namespace SoftTest402.TeamTiga.FinalProject.Oracle
 {
-    public class Oracle_Dave
+    public class OracleDave
     {
         public bool Oracle()
         {
