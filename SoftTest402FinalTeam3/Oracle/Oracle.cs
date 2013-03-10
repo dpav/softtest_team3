@@ -9,7 +9,7 @@ namespace SoftTest402.TeamTiga.FinalProject
     /// </summary>
     class Oracle
     {
-        public bool Oracle()
+        public bool GenericOracle()
         {
             return false;
         }
