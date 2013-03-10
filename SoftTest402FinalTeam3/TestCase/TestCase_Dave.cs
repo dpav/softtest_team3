@@ -19,40 +19,39 @@ namespace SoftTest402.TeamTiga.FinalProject
         public static bool TestCase1()
         {
             // TODO : lots of logic
+
+            // Local Process object to carry through the test
+            Process np = null;
             bool result = false;
+
             Harness.Logger.LogComment("Opening Process");
-         
-            Process np = new Process();
 
             try
             {
                 // start up the process
-                np.StartInfo.FileName = Harness.ProgramPath;
-                np.Start();
+                np = Harness.CreateProcess();
 
-                Harness.Logger.LogComment("I'm logging things in my test");
+                try
+                {
+                    Harness.Logger.LogComment("I'm logging things in my test");
 
-
-                // TODO :logic
-                //result = Oracle_Dave.Oracle();              
-                //Harness.Logger.LogResult();
+                    // TODO : test logic
+                    //result = Oracle_Dave.Oracle();              
+                    //Harness.Logger.LogResult();
+                }
+                catch (Exception ex)
+                {
+                    Harness.Logger.LogComment(System.String.Format("Error : {0}", ex));
+                }
+                finally
+                {
+                    // close the process, even if there's an exception
+                    Harness.TerminateProcess(np);
+                }
             }
             catch (Exception ex)
             {
-                Harness.Logger.LogComment(System.String.Format("Error : {0}", ex));
-            }
-            finally 
-            {
-                // close the process, even if there's an exception
-                if (!np.HasExited)
-                {
-                    np.CloseMainWindow();
-                    np.WaitForExit(TedNPadConstant.WAIT_FOR_EXIT);
-                    if (!np.HasExited)
-                    {
-                        np.Kill();
-                    }
-                }            
+                Harness.Logger.LogComment(System.String.Format("Error starting process : {0}", ex));
             }
 
             // return what our oracle says. Boolean pass/fail.

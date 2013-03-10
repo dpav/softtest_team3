@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace SoftTest402.TeamTiga.FinalProject
 {
     class Helper
-    {/// <summary>
+    {
+        /// <summary>
         /// Method to Click a sub-menu item
         /// </summary>
         /// <param name="hWndMainWindow">Handle to the AUT main window</param>
