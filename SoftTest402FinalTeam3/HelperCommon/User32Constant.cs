@@ -29,5 +29,15 @@
             BST_CHECKED = 0x0001,
             BM_CLICK = 0x00F5    // click button
         }
+
+        
+        // Window Style related Consts
+        public const int GWL_STYLE = -16;
+        public enum Style : long
+        {
+            WS_VISIBLE = 0x10000000,
+            WS_MAXIMIZE = 0x01000000L,
+            WS_BORDER = 0x00800000L
+        }
     }
 }
