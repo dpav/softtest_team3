@@ -40,6 +40,7 @@ namespace SoftTest402.TeamTiga.FinalProject.HelperCommon
             {
                 Logger.LogTestStart(TestName);
                 TestPassResult = RunTestMethod();
+                Logger.LogResult(TestPassResult, true);
                 Logger.LogTestComplete();
             }
             catch (Exception ex)
