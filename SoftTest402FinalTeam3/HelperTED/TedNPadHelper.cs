@@ -28,6 +28,13 @@ namespace SoftTest402.TeamTiga.FinalProject.HelperTED
                 (int)TedNPadConstant.MainMenu.Edit,
                 (int)TedNPadConstant.EditSubMenu.Paste);
         }
+        public static void ClickEditCutMenuItem(IntPtr mainWindowHandle)
+        {
+            Helper.ClickMenuItem(
+                mainWindowHandle,
+                (int)TedNPadConstant.MainMenu.Edit,
+                (int)TedNPadConstant.EditSubMenu.Cut);
+        }
 
         public static void ClickSmartReturnMenuItem(IntPtr mainWindowHandle)
         {
