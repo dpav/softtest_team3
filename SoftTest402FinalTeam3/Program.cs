@@ -19,8 +19,11 @@ namespace SoftTest402.TeamTiga.FinalProject
 
             Harness.RunTest("Option Test 3", TestCaseDave.TestCase1);
             //Harness.RunTest("Option Test 3", TestCaseDave.TestCase3);
-            //Harness.RunTest("Option Test 2", TestCaseDave.TestCase2);          
-        
+            Harness.RunTest("Option Test 2", TestCaseDave.TestCase2);    
+            TestCaseEdit.TestCase1(TED_Path);
+            Harness.RunTest("Edit Test 2", TestCaseEdit.TestCase2);
+            Harness.RunTest("Edit Test 3", TestCaseEdit.TestCase3);
+            
             // TODO : extract the process.start, and just expose a Harness.Process object.
             // Leaving this open to discussion.
         }
