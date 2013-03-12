@@ -57,6 +57,7 @@
     <Compile Include="HelperTED\TedNPadConstant.cs" />
     <Compile Include="HelperTED\TedNPadHelper.cs" />
     <Compile Include="Oracle\Oracle.cs" />
+    <Compile Include="Oracle\OracleEdit.cs" />
     <Compile Include="Oracle\Oracle_Dave.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

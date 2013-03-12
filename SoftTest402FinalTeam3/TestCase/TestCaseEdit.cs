@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using SoftTest402.TeamTiga.FinalProject.HelperCommon;
 using SoftTest402.TeamTiga.FinalProject.HelperTED;
+using SoftTest402.TeamTiga.FinalProject.Oracle;
 
 namespace SoftTest402.TeamTiga.FinalProject.TestCase
 {
@@ -27,7 +28,8 @@ namespace SoftTest402.TeamTiga.FinalProject.TestCase
             string tedNPadDate = Helper.GetTextFromEditWindow(tedNPadWindowHandle);
 
             Harness.Logger.LogResult(tedNPadDate, expectedDate);
-            Console.WriteLine("Test Passed expected date is {0}, but TedNPad date is {1}", expectedDate, tedNPadDate);
+            Console.WriteLine("Test Passed expected date is {0}, TedNPad date is {1}", expectedDate, tedNPadDate);
+            Console.WriteLine("Test 1 done");
 
             if (tedNPadDate == expectedDate)
             {
@@ -79,13 +81,8 @@ namespace SoftTest402.TeamTiga.FinalProject.TestCase
 
                     string tedNPadDate = Helper.GetTextFromEditWindow(tedNPadWindowHandle);
 
-                    Harness.Logger.LogResult(tedNPadDate, expectedDate);
-                    Console.WriteLine("Test Passed expected date is {0}, TedNPad date is {1}", expectedDate, tedNPadDate);
-
-                    if (tedNPadDate == expectedDate)
-                    {
-                        result = true;
-                    }
+                    result = OracleEdit.EditTc2(tedNPadDate, expectedDate);
+                   
                 }
                 catch (Exception ex)
                 {
@@ -105,6 +102,7 @@ namespace SoftTest402.TeamTiga.FinalProject.TestCase
             // return what our oracle says. Boolean pass/fail.
             return result;
         }
+
 
         /// <summary>
         /// This is to test the SelectAll, Cut, Paste and SmartReturn Edit menu items
@@ -151,14 +149,7 @@ namespace SoftTest402.TeamTiga.FinalProject.TestCase
 
                     string tedNPadDate = Helper.GetTextFromEditWindow(tedNPadWindowHandle);
 
-                    Harness.Logger.LogResult(tedNPadDate, expectedDate);
-                    Console.WriteLine("Test Passed expected date is {0}, TedNPad date is {1}", expectedDate,
-                                             tedNPadDate);
-                        
-                    if (tedNPadDate == expectedDate)
-                    {
-                        result = true;
-                    }
+                    result = OracleEdit.EditTc2(tedNPadDate, expectedDate);
                 }
                 catch (Exception ex)
                 {
